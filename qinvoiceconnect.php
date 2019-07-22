@@ -11,7 +11,7 @@ Domain Path: /languages
 
 */
 
-define( 'GF_QINVOICECONNECT_VERSION', '2.1.2' );
+define( 'GF_QINVOICECONNECT_VERSION', '2.2.2' );
 
 add_action( 'gform_loaded', array( 'GF_QinvoiceConnect_Bootstrap', 'load' ), 5 );
 

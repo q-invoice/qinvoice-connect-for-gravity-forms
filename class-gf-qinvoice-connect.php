@@ -748,7 +748,7 @@ class GFQinvoiceConnect extends GFFeedAddOn {
 
 		$document->action = (int)$feed['meta']['request_action'];
 		$document->saverelation = (int)$feed['meta']['save_relation'];
-		$document->layout = (int)$feed['meta']['layout_code'];
+		$document->layout = $feed['meta']['layout_code'];
 		$document->calculation_method = $feed['meta']['calculation_method'];
 		$tags = explode(",",$feed['meta']['tags']);
 		foreach($tags as $tag){

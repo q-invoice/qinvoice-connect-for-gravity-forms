@@ -3,8 +3,8 @@ Contributors: q-invoice
 Donate link: n/a
 Tags: billing, invoicing, gravity forms, estimates
 Requires at least: 3.0.1
-Tested up to: 4.9
-Stable tag: 2.0.9
+Tested up to: 5.2
+Stable tag: 2.2.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -55,6 +55,9 @@ info@q-invoice.sk
 4. screenshot-4.png
 
 == Changelog ==
+
+= 2.2.2 =
+* Fixed layout code
 
 = 2.2.1 =
 * Added duedate support
