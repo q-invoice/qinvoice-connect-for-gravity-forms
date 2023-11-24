@@ -11,7 +11,7 @@ Domain Path: /languages
 
 */
 
-define( 'GF_QINVOICECONNECT_VERSION', '2.2.2' );
+define( 'GF_QINVOICECONNECT_VERSION', '2.2.3' );
 
 add_action( 'gform_loaded', array( 'GF_QinvoiceConnect_Bootstrap', 'load' ), 5 );
 
@@ -19,6 +19,7 @@ add_action( 'gform_loaded', array( 'GF_QinvoiceConnect_Bootstrap', 'load' ), 5 )
 add_action( 'gform_ideal_fulfillment', array ('GF_QinvoiceConnect_Bootstrap', 'after_ideal'), 5, 1);
 add_action( 'gform_sisow_fulfillment', array ('GF_QinvoiceConnect_Bootstrap', 'after_ideal'), 5, 1);
 add_action( 'gform_paypal_fulfillment', array ('GF_QinvoiceConnect_Bootstrap', 'after_paypal'), 5, 1);
+add_action( 'gform_post_payment_completed', array ('GF_QinvoiceConnect_Bootstrap', 'post_payment_completed'), 10, 2 );
 
 add_action( 'gform_entry_detail_sidebar_middle', array ('GF_QinvoiceConnect_Bootstrap', 'container'), 1, 2);
 add_action( 'wp_ajax_gf_resend_request', array ('GF_QinvoiceConnect_Bootstrap', 'resend'), 1, 2);
@@ -45,6 +46,13 @@ class GF_QinvoiceConnect_Bootstrap {
 
 		$gfqc = new GFQinvoiceConnect();
 		$gfqc->export_after_payment($entry,'paypal');
+
+	}
+
+	public static function post_payment_completed($entry, $actoion){
+
+		$gfqc = new GFQinvoiceConnect();
+		$gfqc->export_after_payment($entry,'payment');
 
 	}
 

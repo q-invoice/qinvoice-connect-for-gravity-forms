@@ -573,7 +573,6 @@ class GFQinvoiceConnect extends GFFeedAddOn {
 
 		$extra_fields = array();
 
-		if ( class_exists( 'Pronamic_WP_Pay_Plugin' ) || class_exists( 'GFSisow' ) || class_exists('GFPayPal') || 1==1){
 			$extra_fields = array(
 				array(
 					'name'    => 'payment',
@@ -588,7 +587,7 @@ class GFQinvoiceConnect extends GFFeedAddOn {
                     )
 				)
 			);
-		}
+
 
 		$fields_array = @array_merge($default_fields,$extra_fields);
 
@@ -711,11 +710,6 @@ class GFQinvoiceConnect extends GFFeedAddOn {
 				$active_feed = $feed;
 			}
 		}
-
-		// if ( ! $active_feed['meta']['payment'] == 1 ) {
-		// 	return;
-		// }
-		// temporarily disabled
 
 		if($entry['is_fulfilled'] == 1){
 			$this->export_feed($entry, $form, $active_feed, array('result' => 'ok', 'method' => $method));

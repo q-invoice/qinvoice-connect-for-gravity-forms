@@ -3,8 +3,8 @@ Contributors: q-invoice
 Donate link: n/a
 Tags: billing, invoicing, gravity forms, estimates
 Requires at least: 3.0.1
-Tested up to: 5.2
-Stable tag: 2.2.2
+Tested up to: 6.4.1
+Stable tag: 2.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,20 +32,10 @@ Yes, definitely.
 
 = Do you offer support =
 
-Sure we do. Contact us at info@q-invoice.com or by phone: +31 70 220 62 33
+Sure we do. Contact us at info@q-invoice.com.
 
 Nederland
 info@q-invoice
-+31 70 220 6233
-http://help.q-invoice.nl/q-invoice-gravity-forms-add-on-instellen/
-
-Deutschland
-info@q-invoice.de
-
-Slovensko
-info@q-invoice.sk
-0911 258 330
-
 
 == Screenshots ==
 
@@ -55,6 +45,9 @@ info@q-invoice.sk
 4. screenshot-4.png
 
 == Changelog ==
+
+= 2.2.3 =
+* Added support for payment_completed hook
 
 = 2.2.2 =
 * Fixed layout code
